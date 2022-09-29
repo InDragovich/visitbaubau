@@ -38,7 +38,9 @@ class Pertanyaan extends BaseController
 		
 		public function delete($id_pertanyaan)
 		{
-			
+			if (empty($id_pertanyaan['id_pertanyaan'])) {
+				
+			}
 		$this->pertanyaanModel->delete($id_pertanyaan);
 		session()->setFlashdata('success', 'Data berhasil dihapus!');
 		return redirect()->to('admin/pertanyaan')->withInput();

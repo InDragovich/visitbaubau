@@ -29,8 +29,8 @@
                         <label>Perihal <span style="color: red;">*</span></label>
                         <input id="perihal" name="perihal" for="perihal" type="text" placeholder=""
                             value="<?= old('perihal'); ?>"
-                            class="form-control <?= $validation->hasError('perihal') ? 'is-invalid' : ''; ?>"
-                            placeholder="" required autofocus>
+                            class="form-control <?= $validation->hasError('perihal') ? 'is-invalid' : ''; ?>" required
+                            autofocus>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,8 @@
                         <label>Deskripsi Pertanyaan <span style="color: red;">*</span></label>
                         <textarea id="isi_pertanyaan" name="isi_pertanyaan" for="isi_pertanyaan"
                             class="form-control <?= $validation->hasError('isi_pertanyaan') ? 'is-invalid' : ''; ?>"
-                            placeholder="" value="<?= old('isi_pertanyaan'); ?>" rows="5" required></textarea>
+                            placeholder="Sertakan juga alasan menanyakan hal tersebut"
+                            value="<?= old('isi_pertanyaan'); ?>" rows="5" required></textarea>
                     </div>
                 </div>
             </div>
@@ -50,7 +51,7 @@
                         <label>Nama Lengkap <span style="color: red;">*</span></label>
                         <input id="nama" name="nama" for="nama" rows="5"
                             class="form-control <?= $validation->hasError('nama') ? 'is-invalid' : ''; ?>"
-                            placeholder="" value="<?= old('nama'); ?>" required></input>
+                            placeholder="John Doe" value="<?= old('nama'); ?>" required></input>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
@@ -58,7 +59,7 @@
                         <label>Email <span style="color: red;">*</span></label>
                         <input id="email" name="email" for="email" rows="5"
                             class="form-control <?= $validation->hasError('email') ? 'is-invalid' : ''; ?>"
-                            placeholder="" value="<?= old('email'); ?>" type="email" required></input>
+                            placeholder="emailanda@mail.com" value="<?= old('email'); ?>" type="email" required></input>
                     </div>
                 </div>
             </div>
@@ -68,7 +69,7 @@
                         <label>Alamat <span style="color: red;">*</span></label>
                         <input id="alamat" name="alamat" for="alamat"
                             class="form-control <?= $validation->hasError('alamat') ? 'is-invalid' : ''; ?>"
-                            placeholder="" value="<?= old('alamat'); ?>" type="text" required>
+                            placeholder="Alamat" value="<?= old('alamat'); ?>" type="text" required>
                     </div>
                 </div>
                 <div class="col mb-4">
@@ -76,7 +77,8 @@
                         <label>Nomor Telepon <span style="color: red;">*</span></label>
                         <input id="no_telepon" name="no_telepon" for="no_telepon"
                             class="form-control <?= $validation->hasError('no_telepon') ? 'is-invalid' : ''; ?>"
-                            placeholder="" value="<?= old('no_telepon'); ?>" type="number" maxlength="12" required>
+                            placeholder="0822xxxx" value="<?= old('no_telepon'); ?>" type="number" maxlength="12"
+                            required>
                     </div>
                 </div>
             </div>

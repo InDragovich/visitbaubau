@@ -67,6 +67,8 @@
             </div>
         </div>
     </div>
+
+    <?php if (!empty($pertanyaan)) { ?>
     <!-- Hapus Modal-->
 
     <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -96,6 +98,7 @@
     </div>
 
     <!-- </form> -->
+    <?php } ?>
     <!-- Status Modal -->
     <form action="<?= base_url(); ?>/pertanyaan/activate" method="post">
         <div class="modal fade" id="activateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
