@@ -37,7 +37,7 @@
                         <li>
                             <article>
                                 <h6 class="heading"><a href="#"><?= $e['nama_event']; ?></a></h6>
-                                <p><?= word_limiter($e['deskripsi_event'], 30) ?> &hellip;</p>
+                                <p><?= word_limiter($e['deskripsi_event'], 60) ?> &hellip;</p>
                                 <footer><a class="btn" href="/view/detailevent/<?= $e['slug']; ?>">Read
                                         More</a></footer>
                             </article>
@@ -53,6 +53,15 @@
             <hr class="btmspace-80">
         </div>
         <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <p class="nospace font-xs">Ingin mengajukan event?</p>
+            <p class="heading underline font-x2">Klik di bawah ini</p>
+        </div>
+        <center>
+            <footer><a class="btn" href="/view/pengajuanevent">Ajukan Event</a></footer>
+        </center>
+        <!-- / main body -->
+        <div class="clear"></div>
     </main>
 </div>
 

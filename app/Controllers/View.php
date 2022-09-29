@@ -350,4 +350,116 @@ public function wisata()
     // dd($data);
     return view('views/wisata/detail',$data);
   }
+
+  // Pengajuan Pertanyaan
+  public function pertanyaan()
+  {
+    $data = [
+      'title' => 'Halo Barakati Baubau',
+      'subTitle' => 'Halo Barakati Baubau',
+      'validation' => \Config\Services::validation()
+    ];
+    // dd($data);
+    return view('views/pertanyaan/pengajuan-pertanyaan', $data);
+  }
+
+  public function savepertanyaan(){
+
+// Validasi Data
+if (! $this->validate([
+'perihal' => [
+'rules' => 'required',
+'label' => 'Perihal',
+'errors' => [
+'required' => '{field} harus diisi'
+]
+],
+'isi_pertanyaan' => [
+'rules' => 'required',
+'label' => 'Isi Pertanyaan',
+'errors' => [
+'required' => '{field} harus diisi'
+]
+],
+'nama' => [
+'rules' => 'required',
+'label' => 'Nama',
+'errors' => [
+'required' => '{field} harus diisi'
+]
+],
+'alamat' => [
+'rules' => 'required',
+'label' => 'Alamat',
+'errors' => [
+'required' => '{field} harus diisi'
+]
+],
+'no_telepon' => [
+'rules' => 'required',
+'label' => 'Nomor Telepon',
+'errors' => [
+'required' => '{field} harus diisi'
+]
+],
+'email' => [
+'rules' => 'required',
+'label' => 'Email',
+'errors' => [
+'required' => '{field} harus diisi'
+]
+]
+
+])) {
+//Berisi fungsi redirect jika validasi tidak memenuhi
+// dd(\Config\Services::validation()->getErrors());
+
+return redirect()->to('/view/pertanyaan/pertanyaan')->withInput();
+}
+
+$no_telepon = $this->request->getVar('no_telepon');
+$no_telepon = trim($no_telepon);
+//bersihkan dari karakter yang tidak perlu
+$no_telepon = strip_tags($no_telepon);
+// Berishkan dari spasi
+$no_telepon= str_replace(" ","",$no_telepon);
+// bersihkan dari bentuk seperti (022) 66677788
+$no_telepon= str_replace("(","",$no_telepon);
+// bersihkan dari format yang ada titik seperti 0811.222.333.4
+$no_telepon= str_replace(".","",$no_telepon);
+
+// cek apakah no hp mengandung karakter + dan 0-9
+if(!preg_match('/[^+0-9]/',trim($no_telepon))){
+// cek apakah no hp karakter 1-3 adalah +62
+if(substr(trim($no_telepon), 0, 3)=='+62'){
+$no_telepon = trim($no_telepon);
+}
+// cek apakah no hp karakter 1 adalah 0
+elseif(substr(trim($no_telepon), 0, 1)=='0'){
+$no_telepon = '62'.substr(trim($no_telepon), 1);
+}
+}
+
+// dd($this->request->getVar());
+$slug = url_title($this->request->getVar('perihal'), '-', true);
+if($this->pertanyaanModel->save([
+'perihal' => $this->request->getVar('perihal'),
+'isi_pertanyaan' => $this->request->getVar('isi_pertanyaan'),
+'nama' => $this->request->getVar('nama'),
+'alamat' => $this->request->getVar('alamat'),
+'no_telepon' => $no_telepon,
+'email' => $this->request->getVar('email'),
+'slug' => $slug,
+'active' => 0
+])) {
+session()->setFlashdata('success', 'Pertanyaan telah diajukan!');
+} else {
+session()->setFlashdata('error', 'Pertanyaan gagal diajukan!');
+}
+
+    
+return redirect()->to('/view/pertanyaan');
+}
+
+
 }

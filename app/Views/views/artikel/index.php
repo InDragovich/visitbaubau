@@ -37,8 +37,8 @@
                                                 </a>
                                                 <ul class="post-info">
                                                     <li><a href="#">Admin</a></li>
-                                                    <li> <a
-                                                            href="#"><?= date('M d Y',strtotime($a['created_at'])); ?></a>
+                                                    <li><a href="#"><?= $a['tgl_artikel']; ?></a></li>
+                                                    <li><a href="#">Komentar</a></li>
                                                 </ul>
                                                 <p class="paragraph"> <?= word_limiter($a['isi_artikel'], 60); ?> <a
                                                         rel="nofollow" href="/view/artikel/<?= $a['slug']; ?>"

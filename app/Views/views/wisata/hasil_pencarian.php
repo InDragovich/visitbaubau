@@ -71,8 +71,6 @@
                                 <div class="col-lg-12">
                                     <div class="tourism-post" id="tourism-post">
                                         <div class="tourism-thumb">
-                                            <a href="<?= base_url('view/detailwisata/'.$w['slug']); ?>"
-                                                class="stretched-link"></a>
                                             <img src="/img/wisata/<?= $w['gambar_wisata']; ?>" alt="">
                                             <div class="tourism-title">
                                                 <h1 class="display-6"><?= $w['nama_wisata']; ?></h1>

@@ -70,6 +70,7 @@ abstract class BaseController extends Controller
         $this->kategoriWisataModel = new \App\Models\KategoriWisataModel();
         $this->kategoriWisataModel = new \App\Models\KategoriWisataModel();
         $this->kategoriEventModel = new \App\Models\KategoriEventModel();
+        $this->pertanyaanModel = new \App\Models\PertanyaanModel();
         $this->session = service('session');
         $this->config = config('Auth');
         $this->auth = service('authentication');

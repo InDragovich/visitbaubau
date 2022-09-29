@@ -159,7 +159,7 @@ class Admin extends BaseController
         ];
         $userModel->update($this->request->getVar('id'), $data);        
  
-        return redirect()->to(base_url('admin'));
+        return redirect()->to(base_url('admin/user_list'));
  
     }
 
@@ -388,12 +388,5 @@ class Admin extends BaseController
 		session()->setFlashdata('success', 'Data berhasil dihapus!');
 		return redirect()->to('/admin/users')->withInput();
 		}
-
-    
-
-    
-
-
-
 
 }

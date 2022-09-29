@@ -51,11 +51,6 @@
                     <section class="tourism-posts">
                         <div class="all-tourism-posts">
                             <div class="row">
-                                <?php if(count($produk) == 0){?>
-                                <div class="alert alert-warning text-center" role="alert">
-                                    Produk yang anda cari tidak ditemukan
-                                </div>
-                                <?php } ?>
                                 <?php foreach ($produk as $p) : ?>
                                 <div class="col-lg-3 mb-5">
                                     <div class="card" style="height: 300px;">

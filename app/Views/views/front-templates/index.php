@@ -10,6 +10,8 @@
     <link href="<?= base_url(); ?>/css/layout.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="/font-awesome/css/fontawesome-all.min.css">
     <script src="https://kit.fontawesome.com/bbd258fd77.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 
 <body id="page-top">
@@ -38,6 +40,13 @@
     </div>
     <!-- End of Page Wrapper -->
 
+
+    <!-- SWAL Plugins -->
+    <script src="<?= base_url();  ?>/js/swal/sweetalert2.all.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <!-- <script src="js/swal/sweetalert2.min.js"></script> -->
+
+    <!-- / -->
     <script src="<?= base_url();  ?>/layout/scripts/jquery.min.js"></script>
     <script src="<?= base_url();  ?>/layout/scripts/jquery.backtotop.js"></script>
     <script src="<?= base_url();  ?>/layout/scripts/jquery.mobilemenu.js"></script>
