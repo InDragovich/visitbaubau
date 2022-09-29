@@ -152,7 +152,7 @@ class Admin extends BaseController
     public function activate()
     {
         $userModel = new UserModel();
- 
+
         $data = [ 
             'activate_hash' => null,
             'active' => $this->request->getVar('active') == '0' || '' ? '1' : '0',
