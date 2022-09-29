@@ -2,7 +2,6 @@
 <?= $this->section('page-content'); ?>
 <div class="container-fluid">
 
-
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-700"><b>Data Pertanyaan</b></h1>
 
@@ -85,7 +84,7 @@
                     kembali.</div>
 
                 <div class="modal-footer">
-                    <form action="/event/delete/<?= $pe['id_pertanyaan']; ?>" method="post">
+                    <form action="/pertanyaan/delete/<?= $pe['id_pertanyaan']; ?>" method="post">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="_method" value="DELETE">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
