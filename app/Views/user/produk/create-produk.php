@@ -27,7 +27,7 @@
                         <label for="deskripsi_produk"><b>Deskripsi</b>&nbsp;&nbsp;<span
                                 class="badge badge-light bg-gray-200" style="color: grey;"><b>Wajib</b></span></label>
                         <textarea
-                            class="form-control summernote <?= $validation->hasError('deskripsi_produk') ? 'is-invalid' : ''; ?>"
+                            class="form-control summernote<?= $validation->hasError('deskripsi_produk') ? 'is-invalid' : ''; ?>"
                             id="deskripsi_produk" name="deskripsi_produk" for='deskripsi_produk' rows="3"
                             value="<?= old('deskripsi_produk'); ?>">
                             <?= old('deskripsi_produk'); ?>

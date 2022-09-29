@@ -29,6 +29,7 @@
 
     <!-- Summernote plugin -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="<?= base_url(); ?>/css/summernote-image-list.min.css">
 
@@ -142,12 +143,16 @@
     <!-- JQuery Mask -->
     <script src="<?= base_url(); ?>/vendor/jquery/jquery.mask.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- Summernote Plugins -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script src="<?= base_url(); ?>js/summernote-image-list.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
 
     <script>
     $('.summernote').summernote({
