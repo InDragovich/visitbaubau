@@ -92,8 +92,7 @@
                 <?php foreach (array_slice($event,0,2) as $e) : ?>
                 <li class="one_half first btmspace-50">
                     <article>
-                        <h6 class="heading"><b><a
-                                    href="/view/detailevent/<?= $e['slug']; ?>"><?= $e['nama_event']; ?></a></b></h6>
+                        <h6 class="heading"><a href="#"><?= $e['nama_event']; ?></a></h6>
                         <p class="nospace">Berlokasi di <?= $e['lokasi_event']; ?></p>
                         <p class="nospace">Mulai pada Tanggal <?= $e['tgl_event_mulai']; ?></p>
                         <p class="nospace">Berakhir pada Tanggal <?= $e['tgl_event_berakhir']; ?></p>
@@ -103,9 +102,7 @@
 
                 <?php endforeach; ?>
             </ul>
-
         </div>
-
         <hr class="btmspace-80">
         <!-- </section> -->
 
@@ -137,16 +134,7 @@
                 </li>
                 <?php endforeach; ?>
             </ul>
-            <center>
-                <a href="/view/wisata" style="font-size: 18px;">Lihat Selengkapnya</a>
-            </center>
         </section>
-
-        <hr class="btmspace-80">
-        <!-- </section> -->
-
-        <!-- / main body -->
-        <div class="clear"></div>
 
         <div class="wrapper row3">
             <section class="hoc clear ">
@@ -174,12 +162,6 @@
 
             </section>
         </div>
-
-        <hr class="btmspace-80">
-        <!-- </section> -->
-
-        <!-- / main body -->
-        <div class="clear"></div>
 
 
         <div class="wrapper row3">

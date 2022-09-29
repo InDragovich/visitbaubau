@@ -4,8 +4,6 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-// use App\Models\KategoriWisataModel;
-// use App\Models\WisataModel;
 
 class Event extends BaseController
 {
@@ -15,18 +13,14 @@ class Event extends BaseController
 		$data = [
 			'title' => 'Daftar Event',
 			'subTitle' => 'Event',
-			// 'event' => $event->paginate(5, 'event'),
-			// 'pager' => $this->eventModel->pager,
-			// 'currentPage' => $currentPage
 			'event' => $event
 		  ];
-// dd($event);
 		return view('admin/event/data-event',$data);
 		}
 
 		public function detail($slug){
 			$data = 
-			['title' => 'Tambah Data',
+			['title' => 'Detail Event',
 			'event' => $this->eventModel->getEvent($slug)
 		];
 		if (empty($data['event'])) {
@@ -113,11 +107,18 @@ class Event extends BaseController
 		// pindahkan ke folder img
 		$fileGambarEvent->move('img/event/', $namaFileGambarEvent);
 		
+		
+		}
 		$fileProposalEvent = $this->request->getFile('proposal_event');
+		// apakah tidak ada gambar yang diupload
+		if ($fileProposalEvent->getError() == 4) {
+			$namaFileProposalEvent = 'default.pdf';
+		} else {
+		
   		// dd($fileProposalEvent);
+		$namaFileProposalEvent = $fileProposalEvent->getName();
   		$fileProposalEvent->move('file/event');
-  		$namaFileProposalEvent = $fileProposalEvent->getName();
-
+  		
 		}
 			$user_id = user();
 			$slug = url_title($this->request->getVar('nama_event'), '-', true);

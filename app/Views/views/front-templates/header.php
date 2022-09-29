@@ -21,6 +21,16 @@
                         <li><a class="" href="<?= base_url(); ?>/view/event">EVENT</a></li>
                         <li><a class="" href="<?= base_url(); ?>/view/artikel">ARTIKEL</a></li>
                         <li><a class="" href="<?= base_url(); ?>/view/marketplace">MARKETPLACE</a></li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                PELAYANAN PUBLIK
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="<?= base_url(); ?>/view/pertanyaan">HALO BARAKATI
+                                        BAUBAU</a></li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <!-- ################################################################################################ -->

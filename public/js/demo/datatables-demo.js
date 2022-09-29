@@ -1,5 +1,22 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
+  $('#dataTable').DataTable({
+    initComplete: function () {
+      this.api().columns([2]).every(function () {
+        var column = this;
+        column
+          .data()
+          .unique()
+          .sort()
+          .each(function (d, j) {
+            select.append('<option value="' + d + '">' + d + '</option>');
+          });
+      });
+    },
+  });
+});
+
+$(document).ready(function () {
   $('#dataTableWisata').DataTable({
     initComplete: function () {
       this.api().columns([2]).every(function () {

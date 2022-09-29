@@ -35,8 +35,11 @@
                                                 <h4><?= $artikel['judul_artikel']; ?></h4>
                                                 <ul class="post-info">
                                                     <li>Admin</li>
-                                                    <li><?= date('M d Y',strtotime($artikel['created_at'])); ?>
+                                                    <li><?= date('d F Y',strtotime($artikel['created_at'])); ?>
                                                     </li>
+                                                    <!-- <li>Komentar</li> -->
+                                                    <li><i class="fas fa-eye"></i>
+                                                        <?= $artikel['viewer']; ?> x</a></li>
                                                 </ul>
                                                 <p class="paragraph"><?= $artikel['isi_artikel']; ?></p>
                                                 <div class="post-options">

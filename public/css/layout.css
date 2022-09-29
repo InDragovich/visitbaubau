@@ -808,7 +808,7 @@ nav ol {
 
 #mainav ul ul {
   position: absolute;
-  width: 180px;
+  width: auto;
   text-transform: none;
   z-index: 9999;
 }

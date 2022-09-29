@@ -133,6 +133,12 @@ $routes->get('/admin/event/edit-event/(:segment)', 'Event::edit/$1', ['filter' =
 $routes->post('/admin/event/edit-event/(:num)', 'Event::update/$1', ['filter' => 'role:admin']);
 $routes->post('/admin/event/verifikasi/(:segment)', 'Event::verifikasi/$1', ['filter' => 'role:admin']);
 
+// Kelola Pertanyaan
+$routes->get('/admin/pertanyaan', 'Pertanyaan::index', ['filter' => 'role:admin']);
+$routes->get('/admin/pertanyaan/(:any)', 'Pertanyaan::detail/$1', ['filter' => 'role:admin']);
+// $routes->get('/admin/event/detail-event/(:segment)', 'Event::detail/$1', ['filter' => 'role:admin']);
+
+
 $routes->get('/wisata', 'Home::index');
 $routes->get('/event', 'Home::index');
 $routes->get('/artikel', 'Home::index');

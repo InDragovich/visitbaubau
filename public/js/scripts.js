@@ -6,6 +6,18 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
+const flashdata = $('.flash-data').data('flashdata');
+console.log(flashdata);
+
+if (flashdata) {
+    Swal.fire({
+        title: 'Berhasil!',
+        text: 'Berhasil Mengirimkan Pertanyaan. Pertanyaan Anda akan dibalas via Whatsapp atau Email.',
+        icon: 'success',
+        // confirmButtonText: 'Cool'
+    });
+}
+
 //parallax
 
 $(window).scroll(function () {

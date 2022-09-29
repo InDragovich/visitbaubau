@@ -55,7 +55,7 @@
                             <div class="row">
                                 <?php if(count($wisata) == 0){?>
                                 <div class="alert alert-warning text-center" role="alert">
-                                    Wisata yang anda cari tidak ditemukan
+                                    Wisata yang sedang anda cari tidak ada
                                 </div>
                                 <?php } ?>
                                 <?php foreach ($wisata as $w) : ?>

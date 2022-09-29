@@ -63,9 +63,9 @@
 
     <!-- Nav Item - Data Kategori Pariwisata -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('admin/kategoriwisata'); ?>">
+        <a class="nav-link" href="<?= base_url('admin/pertanyaan'); ?>">
             <i class="fas fa-tags"></i>
-            <span>Data Kategori Pariwisata</span></a>
+            <span>Data Pertanyaan</span></a>
     </li>
 
     <!-- Divider -->
@@ -131,7 +131,7 @@
             <span>My Profile</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('user/mediagit config [--global] user.name "Full Name"'); ?>">
+        <a class="nav-link" href="<?= base_url('user/media'); ?>">
             <i class="fas fa-link"></i>
             <span>Media</span></a>
     </li>

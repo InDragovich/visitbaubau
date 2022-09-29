@@ -145,13 +145,37 @@ class User extends BaseController
     $fileGambarUser->move('img/user/', $namaFileGambarUser);
     
     }
+
+    $no_telepon = $this->request->getVar('no_telepon');
+    $no_telepon = trim($no_telepon);
+    //bersihkan dari karakter yang tidak perlu
+    $no_telepon = strip_tags($no_telepon); 
+    // Berishkan dari spasi
+    $no_telepon= str_replace(" ","",$no_telepon);
+    // bersihkan dari bentuk seperti  (022) 66677788
+     $no_telepon= str_replace("(","",$no_telepon);
+    // bersihkan dari format yang ada titik seperti 0811.222.333.4
+     $no_telepon= str_replace(".","",$no_telepon); 
+
+     // cek apakah no hp mengandung karakter + dan 0-9
+     if(!preg_match('/[^+0-9]/',trim($no_telepon))){
+        // cek apakah no hp karakter 1-3 adalah +62
+        if(substr(trim($no_telepon), 0, 3)=='+62'){
+            $no_telepon = trim($no_telepon);
+        }
+        // cek apakah no hp karakter 1 adalah 0
+        elseif(substr(trim($no_telepon), 0, 1)=='0'){
+            $no_telepon = '62'.substr(trim($no_telepon), 1);
+        }
+    }
+
         if($this->usersModel->save([
             'id'     => $id_user,
             // 'id_user'     => $this->request->user_id,
             'email' => $this->request->getVar('email'),
               'username' => $this->request->getVar('username'),
               'fullname' => $this->request->getVar('fullname'),
-              'no_telepon' => $this->request->getVar('no_telepon'),
+              'no_telepon' => $no_telepon,
               'alamat' => $this->request->getVar('alamat'),
               'deskripsi' => $this->request->getVar('deskripsi'),
               'user_image' => $namaFileGambarUser,
