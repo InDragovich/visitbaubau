@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2022 at 04:40 AM
+-- Generation Time: Sep 30, 2022 at 04:56 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -632,7 +632,17 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (455, '::1', 'skybloods19@gmail.com', 7, '2022-09-21 21:18:13', 1),
 (456, '::1', 'skybloods19@gmail.com', 7, '2022-09-21 21:26:13', 1),
 (457, '::1', 'qwerty@gmail.com', NULL, '2022-09-21 21:36:56', 0),
-(458, '::1', 'qwerty@gmail.com', 3, '2022-09-21 21:37:00', 1);
+(458, '::1', 'qwerty@gmail.com', 3, '2022-09-21 21:37:00', 1),
+(459, '::1', 'qwerty@gmail.com', 3, '2022-09-22 06:37:29', 1),
+(460, '::1', 'qwerty@gmail.com', 3, '2022-09-22 06:44:07', 1),
+(461, '::1', 'qwerty@gmail.com', 3, '2022-09-22 06:47:14', 1),
+(462, '::1', 'skybloods19@gmail.com', 7, '2022-09-22 21:42:36', 1),
+(463, '::1', 'qwerty@gmail.com', 3, '2022-09-28 04:32:20', 1),
+(464, '::1', 'qwerty@gmail.com', 3, '2022-09-28 20:27:53', 1),
+(465, '::1', 'skybloods19@gmail.com', 7, '2022-09-28 23:08:46', 1),
+(466, '::1', 'qwerty@gmail.com', 3, '2022-09-28 23:13:05', 1),
+(467, '::1', 'skybloods19@gmail.com', 7, '2022-09-29 02:45:44', 1),
+(468, '::1', 'qwerty@gmail.com', 3, '2022-09-29 03:21:53', 1);
 
 -- --------------------------------------------------------
 
@@ -902,6 +912,33 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pertanyaan`
+--
+
+CREATE TABLE `pertanyaan` (
+  `id_pertanyaan` int(11) NOT NULL,
+  `perihal` varchar(255) NOT NULL,
+  `slug` varchar(255) NOT NULL,
+  `isi_pertanyaan` varchar(255) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `no_telepon` varchar(12) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `active` tinyint(1) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pertanyaan`
+--
+
+INSERT INTO `pertanyaan` (`id_pertanyaan`, `perihal`, `slug`, `isi_pertanyaan`, `nama`, `alamat`, `no_telepon`, `email`, `active`, `created_at`, `updated_at`) VALUES
+(3, 'Subject', 'subject', 'lorem ipsum ipaisdaisod asd awea', 'Agus Indra', 'Jl. Pahlawan', '628225162212', 'agusind@gmail.com', 1, '2022-09-29 02:34:12', '2022-09-29 02:34:25');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `produk`
 --
 
@@ -964,13 +1001,13 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `email`, `username`, `fullname`, `no_telepon`, `alamat`, `deskripsi`, `user_image`, `password_hash`, `reset_hash`, `reset_at`, `reset_expires`, `activate_hash`, `status`, `status_message`, `active`, `force_pass_reset`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (3, 'qwerty@gmail.com', 'admin', NULL, '', '', '', 'default.jpg', '$2y$10$NF.lOcDvzSlG.ZjAAIT5MeNm0MvB1hFgPRlFV2w/284pUXXy3BdfW', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2022-07-17 09:31:46', '2022-07-17 09:31:46', NULL),
 (4, 'agusindra376@gmail.com', 'agusindra', 'Sanjabil', '6282251622192', 'Jl. Yos Sudarso No.38, Wale, Kec. Wolio, Kota Bau-Bau, Sulawesi Tenggara 93717', '<p>Ini teks deskripsi</p>', '1660553651_75f235cb5c31d7a5a490.png', '$2y$10$elG4FtvKK1MhVvu7TMrTP.HB/g6t3b3TFXP.ErZUhk6LR/ZpSr4Vi', NULL, '2022-07-20 07:31:37', NULL, NULL, NULL, NULL, 1, 0, '2022-07-17 10:03:06', '2022-08-15 03:54:11', NULL),
-(7, 'skybloods19@gmail.com', 'merchant', 'Merchant', '682251622192', 'Jl Labuke Kota Baubau', '<p><font face=\"arial, sans-serif\">Merchant</font></p><p><span style=\"padding: 0; margin: 0; margin-left: 5px;\"></span></p>', '1663813503_eac596395d4079e75d1a.png', '$2y$10$1iqiiOwPcQc0axL8DK7iLeG.0w6sZce3p4Wv1tjgVSrJHaP1VCMGu', NULL, '2022-07-18 04:21:54', NULL, NULL, NULL, NULL, 1, 0, '2022-07-18 03:42:30', '2022-09-21 21:25:03', NULL),
+(7, 'skybloods19@gmail.com', 'merchant', 'Merchant', '6282251622192', 'Jl Labuke Kota Baubau', '<p><font face=\"arial, sans-serif\">Merchant</font></p><p><span style=\"padding: 0; margin: 0; margin-left: 5px;\"></span></p>', 'default.jpg', '$2y$10$1iqiiOwPcQc0axL8DK7iLeG.0w6sZce3p4Wv1tjgVSrJHaP1VCMGu', NULL, '2022-07-18 04:21:54', NULL, NULL, NULL, NULL, 1, 0, '2022-07-18 03:42:30', '2022-09-28 23:11:02', NULL),
 (9, 'qwerty123@gmail.com', 'adebuton', 'Ade Buton', '6282251622192', 'Jalan Labuke', '<p><span style=\"color: rgb(5, 5, 5); font-family: \" segoe=\"\" ui=\"\" historic\",=\"\" \"segoe=\"\" ui\",=\"\" helvetica,=\"\" arial,=\"\" sans-serif;=\"\" font-size:=\"\" 15px;=\"\" text-align:=\"\" center;\"=\"\">TOKO PENJUALAN SOUVENIR ETHNIC BUTON</span></p><p></p>', '1661526922_02dd3f20217ead033b2a.png', '$2y$10$A8jgHbsZ18LsdWERmT1aUeoCEQCPmH844rIRIfxteYepQ3PjtWPIK', NULL, NULL, NULL, 'cc8425244340c7f1a6f85f51f001f70f', NULL, NULL, 1, 0, '2022-08-05 00:27:10', '2022-08-26 10:15:22', NULL),
 (10, 'kevkev@gmail.com', 'katapayisulaa', 'Katapayi Sulaa', '', '', '', 'default.jpg', '$2y$10$QsyDneOFGRg3iYRYVTACJ.qlJj0ruZorSba082c9I4YT89WP7pDva', NULL, NULL, NULL, 'fd7f35623e4fad14f9342fc67b8ca500', NULL, NULL, 1, 0, '2022-08-05 00:45:18', '2022-08-05 00:45:18', NULL),
 (11, 'endapo@gmail.com', 'endapo', 'Endapo', '6282251622192', '', '', 'default.jpg', '$2y$10$DexDTvlpJ7/OZBDD7Sb.ouzenOj9DDYOKwJIYmfSc1Kpbl08bYPSa', NULL, NULL, NULL, 'cf7df23bff7190cd46e0520274944dee', NULL, NULL, 1, 0, '2022-08-05 01:07:49', '2022-08-05 01:07:49', NULL),
 (12, 'testing@gmail.com', 'akunpenjual', NULL, '', '', '', 'default.svg', '$2y$10$IAGHjJbfr0lwQWi2.dktcOPYckMbKZ8RS.rw9IS.0dipQKh2OI/hC', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2022-08-07 10:05:57', '2022-08-07 10:05:57', NULL),
 (13, 'penjua1@gmail.com', 'tokobajubuton', NULL, '', '', '', 'default.svg', '$2y$10$vo2Tv7vQ2e5FvpTygD/qSu1FVy2aaI3amuL/YRsiwvWcG7Na2WhCK', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2022-08-07 20:54:16', '2022-08-07 20:54:16', NULL),
-(15, 'agusindra3176@gmail.com', 'penjual', NULL, '', '', '', 'default.svg', '$2y$10$wGuLZ7.sRTvd3Z57UFrW3.c3ShUiLz9M6Ciyx92OcrM.P/lacUbza', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '2022-08-13 23:16:23', '2022-08-13 23:16:42', NULL),
+(15, 'agusindra3176@gmail.com', 'penjual', NULL, '', '', '', 'default.svg', '$2y$10$wGuLZ7.sRTvd3Z57UFrW3.c3ShUiLz9M6Ciyx92OcrM.P/lacUbza', NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '2022-08-13 23:16:23', '2022-09-29 00:35:54', NULL),
 (16, 'test@gmail.com', 'testing', NULL, '', '', '', 'default.svg', '$2y$10$kHKVZWzQX0INruSSetCqI.2avwck8x29xrX.Ykjz/xXJKIrjBgNqO', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2022-08-21 01:46:23', '2022-08-21 01:46:23', NULL),
 (20, 'testweb1905@gmail.com', 'butikbuton', 'Butik Buton', '6282251622192', 'Jalan Labuke Kota Baubau', '<p>Butik buton yang sudah ada sejak tahun 2004. Barang yang dibuat merupakan kualitas terbaik.</p><p><a href=\"https://www.instagram.com/agusindra_d/\" target=\"_blank\">Instagram</a>&nbsp;</p><p><a href=\"http://www.tokopedia.com\" target=\"_blank\">Tokopedia</a><br></p>', '1661068457_93ab5ec0a824b208ac55.jpg', '$2y$10$XzJZFH8soE1kbe5hFfnX7ua/wNBrr8P.JnlyBhIxeQXgLjAPC3wvG', NULL, NULL, NULL, NULL, NULL, NULL, 1, 0, '2022-08-21 02:50:06', '2022-08-21 02:54:17', NULL);
 
@@ -1147,6 +1184,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pertanyaan`
+--
+ALTER TABLE `pertanyaan`
+  ADD PRIMARY KEY (`id_pertanyaan`);
+
+--
 -- Indexes for table `produk`
 --
 ALTER TABLE `produk`
@@ -1198,7 +1241,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=459;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=469;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -1222,7 +1265,7 @@ ALTER TABLE `auth_tokens`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id_event` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_event` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `kategori_akomodasi`
@@ -1265,6 +1308,12 @@ ALTER TABLE `media`
 --
 ALTER TABLE `migrations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pertanyaan`
+--
+ALTER TABLE `pertanyaan`
+  MODIFY `id_pertanyaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `produk`
