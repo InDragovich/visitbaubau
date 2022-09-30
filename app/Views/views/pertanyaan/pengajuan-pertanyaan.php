@@ -7,7 +7,8 @@
         <h6 class="heading heading-top">Halo Barakati Baubau</h6>
         <br>
         <ul>
-            <li class="heading-top">Silahkan gunakan form ini untuk bertanya sesuatu terkait Kota baubau</li>
+            <li class="heading-top">Silahkan gunakan form ini untuk beri pertanyaan, saran, maupun kritikan terkait
+                kepariwisataan dan ekonomi kreatif Kota Baubau</li>
         </ul>
         <!-- ################################################################################################ -->
     </div>
