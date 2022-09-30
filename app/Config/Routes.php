@@ -140,9 +140,28 @@ $routes->get('/admin/pertanyaan/(:any)', 'Pertanyaan::detail/$1', ['filter' => '
 
 
 $routes->get('/wisata', 'Home::index');
+$routes->get('/wisata/(:any)', 'Home::index/$1');
 $routes->get('/event', 'Home::index');
+$routes->get('/event/(:any)', 'Home::index/$1');
 $routes->get('/artikel', 'Home::index');
-$routes->get('/kategori', 'Home::index');
+$routes->get('/artikel/(:any)', 'Home::index/$1');
+$routes->get('/kategoriwisata', 'Home::index');
+$routes->get('/kategoriwisata/(:any)', 'Home::index/$1');
+$routes->get('/kategoriproduk', 'Home::index');
+$routes->get('/kategoriproduk/(:any)', 'Home::index/$1');
+$routes->get('/kategorievent', 'Home::index');
+$routes->get('/kategorievent/(:any)', 'Home::index/$1');
+$routes->get('/profil', 'Home::index');
+$routes->get('/profil/(:any)', 'Home::index/$1');
+$routes->get('/pertanyaan', 'Home::index');
+$routes->get('/pertanyaan/(:any)', 'Home::index/$1');
+$routes->get('/produk', 'Home::index');
+$routes->get('/produk/(:any)', 'Home::index/$1');
+$routes->get('/media', 'Home::index');
+$routes->get('/media/(:any)', 'Home::index/$1');
+// $routes->get('/(:any)', 'Home::index/$1');
+
+
 
 
 // Routes User
