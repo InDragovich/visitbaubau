@@ -3,3 +3,4 @@ Update V1.1.1
 - Penambahan menu Kotak Pertanyaan
 - Penambahan tabel "pertanyaan"
 - Perbaikan pada No. telepon user saat mengirimkan pertanyaan
+- Perbaiakan validasi login admin
