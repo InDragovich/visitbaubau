@@ -37,7 +37,6 @@ abstract class BaseController extends Controller
         $this->session = \Config\Services::session();
         $this->session->start();
 
-
     }
     /**
      * An array of helpers to be loaded automatically upon

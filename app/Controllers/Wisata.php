@@ -21,9 +21,6 @@ class Wisata extends BaseController
 		$data = [
 			'title' => 'Daftar Wisata',
 			'subTitle' => 'Wisata',
-			// 'event' => $event->paginate(5, 'event'),
-			// 'pager' => $this->eventModel->pager,
-			// 'currentPage' => $currentPage
 			'wisata' => $wisata,
 			'kategori_wisata' => $kategoriWisata
 		  ];
