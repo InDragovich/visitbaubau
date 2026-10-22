@@ -136,3 +136,15 @@
 #--------------------------------------------------------------------
 
 # curlrequest.shareOptions = true
+
+#--------------------------------------------------------------------
+# EMAIL (SMTP)
+#--------------------------------------------------------------------
+# Isi di file .env lokal, jangan di-commit.
+
+# email.fromEmail =
+# email.SMTPHost = smtp.gmail.com
+# email.SMTPUser =
+# email.SMTPPass =
+# email.SMTPPort = 465
+# email.SMTPCrypto = ssl
