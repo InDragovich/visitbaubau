@@ -125,3 +125,10 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+#-------------------------
+# Data pengguna & dump database
+#-------------------------
+DATABASE/*.sql
+!DATABASE/schema.sql
+public/img/user/*
+!public/img/user/default.jpg
