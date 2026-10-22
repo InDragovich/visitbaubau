@@ -1,31 +1,31 @@
 # Visit Baubau
 
-Aplikasi web informasi pariwisata Kota Baubau, dibuat sebagai proyek pembelajaran (2022).
-Dibangun dengan CodeIgniter 4 dan MySQL/MariaDB.
+A tourism information web application for Baubau City, built as my **final project (Tugas Akhir) for the Diploma 3 (D3) Information Systems program** (2022).
+It is developed with CodeIgniter 4 and MySQL/MariaDB.
 
-## Fitur
-- Informasi wisata beserta kategorinya
-- Artikel dengan komentar pengunjung
-- Agenda/event beserta kategorinya
-- Marketplace produk lokal dengan katalog dan pencarian
-- Kotak pertanyaan dari pengunjung
-- Halaman visi-misi dan struktur organisasi
-- Autentikasi dengan [Myth:Auth](https://github.com/lonnieezell/myth-auth) dan dua peran:
-  `admin` (kelola seluruh konten dan pengguna) dan `penjual` (kelola produk sendiri)
+## Features
+- Tourist destination information with categories
+- Articles with visitor comments
+- Events with categories
+- Local product marketplace with catalog and search
+- Visitor question box
+- Vision, mission, and organizational structure pages
+- Authentication with [Myth:Auth](https://github.com/lonnieezell/myth-auth) and two roles:
+  `admin` (manages all content and users) and `penjual` (seller, manages their own products)
 
-## Teknologi
+## Tech Stack
 PHP 7.4+ / 8.x, CodeIgniter 4, Myth:Auth, MySQL/MariaDB, Bootstrap.
 
-## Menjalankan secara lokal
-1. `composer install`
-2. Salin `env` menjadi `.env`, lalu isi `database.default.*` dan (opsional) `email.*` untuk SMTP.
-3. Buat database dan impor skema `DATABASE/schema.sql` (struktur tabel saja, tanpa data).
-4. Daftarkan akun, lalu atur perannya menjadi `admin` lewat tabel `auth_groups_users`.
-5. `php spark serve`, lalu buka `http://localhost:8080`.
+## Running Locally
+1. Run `composer install`.
+2. Copy `env` to `.env`, then fill in `database.default.*` and, optionally, `email.*` for SMTP.
+3. Create a database and import `DATABASE/schema.sql` (table structure only, no data).
+4. Register an account, then set its role to `admin` through the `auth_groups_users` table.
+5. Run `php spark serve` and open `http://localhost:8080`.
 
-## Catatan
-- Kredensial SMTP, dump data, dan foto pengguna tidak disimpan di repositori.
-- Repositori ini tidak memiliki tes otomatis selain kerangka bawaan CodeIgniter.
-- Riwayat pembaruan ada di [CHANGELOG.md](CHANGELOG.md).
+## Notes
+- SMTP credentials, data dumps, and user photos are not stored in this repository.
+- The repository has no automated tests beyond the CodeIgniter skeleton.
+- See [CHANGELOG.md](CHANGELOG.md) for the update history.
 
-Lisensi: MIT.
+License: MIT.
